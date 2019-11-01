@@ -7,11 +7,13 @@ $params = array(
 
 echo http_build_query($params) . " ";
 
-function generateHref($pageName, $params){
-
-
-    
-
+function generateHref($pageName, $params) {
+    return 'href = " ' . $pageName . '/?' . generateUrlQuery($params) . ' "';
 }
-?>
-<a href="../domaci_2/helpers.php" target="_blank">domaci</a>
+function formatGetParams() {
+    echo "<ul>";
+        foreach($_GET as $element) {
+            echo "<li> $element </li>";
+        }
+    echo "</ul>";
+}
