@@ -17,3 +17,4 @@ function formatGetParams() {
         }
     echo "</ul>";
 }
+?>
